@@ -1,6 +1,5 @@
 package de.EKS.Jan.obs;
 
-import java.net.Socket;
 import java.util.List;
 
 public class Server {
@@ -22,40 +21,22 @@ public class Server {
 	 */
 	private String myPort; 
 	
-	/**
-	 * Erstellt einen Server mit Port und IP.
-	 * @param myIP Die IP 
-	 * @param myPort Der Port
-	 */
 	public Server(String myIP, String myPort) {
 		this.myIP= myIP; 
 		this.myPort = myPort; 
 	}
 	
-	/**
-	 * Fügt eine bestehende Connection zu der Liste hinzu
-	 * @param client Der {@link Client} der Connection {@link Socket}
-	 */
 	public void addConnection(Client client) {
 		this.connectetClients.add(client);
 	}
-	/**
-	 * Entfertn eine {@link Socket}connection aus der Liste. Und fügt diese zu einer weiteren liste hinzu.
-	 * @param client
-	 */
 	public void removeConnection(Client client){
-		if(!connectetClients.contains(client)) // Schaut ob der Client tatsächlich verbunden ist
+		if(!connectetClients.contains(client)) // TODO Real Check
 			throw new NullPointerException("Dieser Client ist nicht Verbunden!");
 		
-		if(disconnectetClients.contains(client)){ // Schaut ob der Client nicht schon in der "Nicht mehr verbunden" Liste ist.
-			connectetClients.remove(client); // Entfernt diese dann auch der Connection liste.(Und fügt ihn nicht nocheinmal hinzu) 
+		if(disconnectetClients.contains(client)){
+			connectetClients.remove(client); 
 			return; 
 		}
-		/*
-		 *  Selbsterklärend 
-		 *  		|
-		 *  	   \ /
-		 */
 		connectetClients.remove(client); 
 		disconnectetClients.add(client);
 	}

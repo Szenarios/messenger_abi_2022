@@ -51,11 +51,7 @@ public class Server {
 			connectetClients.remove(client); // Entfernt diese dann auch der Connection liste.(Und fügt ihn nicht nocheinmal hinzu) 
 			return; 
 		}
-		/*
-		 *  Selbsterklärend 
-		 *  		|
-		 *  	   \ /
-		 */
+		// Selbsterklärend
 		connectetClients.remove(client); 
 		disconnectetClients.add(client);
 	}
