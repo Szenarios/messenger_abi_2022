@@ -5,4 +5,6 @@
 <fullyQualifiedTypeName name="de.EKS.Jan.obs.User"/>
 <fullyQualifiedTypeName name="de.EKS.Jan.obs.Client"/>
 <fullyQualifiedTypeName name="java.net.Socket"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
 </qualifiedTypeNameHistroy>

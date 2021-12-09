@@ -1,0 +1,14 @@
+package de.jan.sendtest;
+
+import java.net.Socket;
+
+import de.EKS.Jan.Main;
+
+public class testSend {
+	
+	
+	
+	public static void main(String[] args) {
+		Socket socket = new Socket("localhost", 187);
+	}
+}
